@@ -2,6 +2,8 @@ const puppeteer = require('puppeteer');
 const express = require('express');
 const app = express();
 
+const port = process.env.PORT || 5000;
+
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
 
@@ -152,4 +154,4 @@ app.get('/fetch', (req, res) => {
 
 
 
-app.listen(3000);
+app.listen(port);
